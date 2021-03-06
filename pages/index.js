@@ -1,10 +1,19 @@
-import styled from 'styled-components'
-
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`
+import styled from "styled-components";
+import Card from "../components/Card";
 
 export default function Home() {
-  return <Title>My page</Title>
+  return (
+    <HomeContainer>
+      <Card />
+    </HomeContainer>
+  );
 }
+
+const HomeContainer = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-content: center;
+`;
